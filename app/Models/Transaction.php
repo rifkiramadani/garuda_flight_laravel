@@ -33,6 +33,6 @@ class Transaction extends Model
 
     public function transactionPassengers()
     {
-        return $this->hasMany(TransactionPassenger::class);
+        return $this->hasOne(TransactionPassenger::class);
     }
 }
