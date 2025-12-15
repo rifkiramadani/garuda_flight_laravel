@@ -20,7 +20,7 @@ class AirportsTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image'),
+            ImageColumn::make('image')->disk('public'),
                 TextColumn::make('iata_code'),
                 TextColumn::make('name'),
                 TextColumn::make('city'),

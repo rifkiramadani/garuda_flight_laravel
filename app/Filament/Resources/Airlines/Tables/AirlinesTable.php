@@ -20,7 +20,7 @@ class AirlinesTable
     {
         return $table
             ->columns([
-                ImageColumn::make('logo'),
+            ImageColumn::make('logo')->disk('public'),
                 TextColumn::make('code'),
                 TextColumn::make('name')
             ])

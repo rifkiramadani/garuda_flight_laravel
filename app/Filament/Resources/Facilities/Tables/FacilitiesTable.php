@@ -20,7 +20,7 @@ class FacilitiesTable
     {
         return $table
             ->columns([
-                ImageColumn::make('image'),
+            ImageColumn::make('image')->disk('public'),
                 TextColumn::make('name'),
                 TextColumn::make('description')
             ])

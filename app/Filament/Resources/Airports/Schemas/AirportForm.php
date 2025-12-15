@@ -16,7 +16,8 @@ class AirportForm
                     ->image()
                     ->directory('airports')
                     ->required()
-                    ->columnSpan(2),
+                ->columnSpan(2)
+                ->disk('public'),
                 TextInput::make('iata_code')
                     ->required(),
                 TextInput::make('name')

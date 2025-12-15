@@ -16,7 +16,8 @@ class AirlineForm
                     ->image()
                     ->directory('airlines')
                     ->columnSpan(2)
-                    ->required(),
+                ->required()
+                ->disk('public'),
                 TextInput::make('code')
                     ->required(),
                 TextInput::make('name')
