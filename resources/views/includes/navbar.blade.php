@@ -5,7 +5,7 @@
             </a>
             <ul class="flex items-center gap-[30px] flex-wrap">
                 <li>
-                    <a href="index.html" class="font-bold transition-all duration-300 hover:font-bold">Flights</a>
+                    <a href="/flights" class="font-bold transition-all duration-300 hover:font-bold">Flights</a>
                 </li>
                 <li>
                     <a href="#" class="transition-all duration-300 hover:font-bold ">Hotels</a>

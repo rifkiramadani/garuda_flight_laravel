@@ -20,7 +20,7 @@
         <p class="text-lg leading-8">Your truly great experience starts here with us <br>that lorem dolor amet si
             package exclusively matter.</p>
     </div>
-    <form action="available-flights.html"
+    <form action="/flights"
         class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[86px]">
         <div class="flex flex-col rounded-[30px] p-[30px] gap-4 bg-white">
             <h2 class="font-bold text-xl leading-[30px]">Book Your Next Flight</h2>
@@ -71,8 +71,8 @@
                         <div id="Arrival-Dropdown"
                             class="dropdown-content hidden absolute z-10 top-full mt-4 h-[232px] rounded-[18px] bg-white border border-[#E8EFF7] overflow-y-scroll custom-scrollbar">
                             <div class="flex flex-col justify-center w-[483px] p-5 gap-4 shrink-0">
-                                @foreach ($airports as $aiport)
-                                    <label
+                              @foreach ($airports as $airport)
+                                <label
                                     class="relative flex items-center rounded-[10px] gap-[10px] p-0 has-[:checked]:p-[10px] has-[:checked]:bg-garuda-bg-grey transition-all duration-300">
                                     <input type="radio" name="arrival" id="{{$airport->iata_code}}"
                                         class="absolute opacity-0 top-1/2 left-1/2" value="{{$airport->iata_code}}">

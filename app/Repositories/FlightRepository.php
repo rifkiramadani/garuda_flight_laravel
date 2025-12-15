@@ -12,14 +12,14 @@ class FlightRepository implements FlightRepositoryInterface
         $flights = Flight::query();
 
         if (!empty($filter['departure'])) {
-            $flights->whereHas('segments', function ($query) use ($filter) {
+            $flights->whereHas('flightSegments', function ($query) use ($filter) {
                 $query->where('airport_id', $filter['departure'])
                     ->where('sequence', '1');
             });
         }
 
         if (!empty($filter['destination'])) {
-            $flights->whereHas('segments', function ($query) use ($filter) {
+            $flights->whereHas('flightSegments', function ($query) use ($filter) {
                 $query->where('airport_id', $filter['destination'])
                     ->orderBy('sequence', 'desc')
                     ->limit(1);
@@ -27,10 +27,12 @@ class FlightRepository implements FlightRepositoryInterface
         }
 
         if (!empty($filter['date'])) {
-            $flights->whereHas('segments', function ($query) use ($filter) {
+            $flights->whereHas('flightSegments', function ($query) use ($filter) {
                 $query->whereDate('time', $filter['date']);
             });
         }
+
+        return $flights->get();
     }
 
     public function getFlightByFlightNumber($flightNumber)

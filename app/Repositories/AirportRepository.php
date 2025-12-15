@@ -19,6 +19,6 @@ class AirportRepository implements AirportRepositoryInterface
 
     public function getAirportByIataCode($iataCode)
     {
-        return Airport::where('iatacode', $iataCode)->first();
+        return Airport::where('iata_code', $iataCode)->first();
     }
 }

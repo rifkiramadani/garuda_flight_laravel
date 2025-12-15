@@ -14,6 +14,10 @@ class FlightSegment extends Model
 
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'time' => 'datetime',
+    ];
+
     public function flight()
     {
         return $this->belongsTo(Flight::class);
