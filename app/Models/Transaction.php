@@ -31,7 +31,7 @@ class Transaction extends Model
         return $this->belongsTo(PromoCode::class);
     }
 
-    public function transactionPassengers()
+    public function transactionPassangers()
     {
         return $this->hasOne(TransactionPassenger::class);
     }
