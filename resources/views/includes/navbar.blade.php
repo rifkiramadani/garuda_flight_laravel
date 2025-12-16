@@ -22,7 +22,7 @@
                     <img src="assets/images/icons/call-calling-black.svg" class="flex w-5 h-5 shrink-0" alt="icon">
                     <span class="font-semibold">Call Us</span>
                 </a>
-                <a href="check-booking.html"
+                <a href="{{route('booking.checkBooking')}}"
                     class="flex items-center rounded-full border border-garuda-black py-3 px-5 gap-[10px] bg-garuda-black">
                     <img src="assets/images/icons/note-favorite-white.svg" class="flex w-5 h-5 shrink-0" alt="icon">
                     <span class="font-semibold text-white">My Booking</span>
