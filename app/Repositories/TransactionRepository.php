@@ -13,7 +13,8 @@ class TransactionRepository implements TransactionRepositoryInterface
 
     public function getTransactionDataFromSession()
     {
-        return session()->get('transaction');
+        // return session()->get('transaction');
+        return session()->get('transaction', []);
     }
 
     public function saveTransactionDataToSession($data)
