@@ -84,8 +84,31 @@ class BookingController extends Controller
 
     public function savePassangerDetails(Request $request, $flightNumber)
     {
-        dd($request->all());
         $this->transactionRepository->saveTransactionDataToSession($request->all());
+        return redirect()->route('booking.checkout', ['flightNumber' => $flightNumber]);
+    }
+
+    public function checkout($flightNumber)
+    {
+        // dd(session()->all());
+
+        $transaction = $this->transactionRepository->getTransactionDataFromSession();
+
+        // --- Perbaikan dimulai di sini ---
+
+        // Pengecekan jika data 'flight_class_id' tidak ada dalam session
+        // Ini mencegah akses offset pada null jika transaction belum disimpan
+        if (!isset($transaction['flight_class_id'])) {
+            // Redirect ke halaman pilih tier/flight jika data session hilang
+            return redirect()->route('flight.index')->with('error', 'Please select a flight and a class tier first.');
+        }
+
+        // --- Perbaikan berakhir di sini ---
+
+        $flight = $this->flightRepository->getFlightByFlightNumber($flightNumber);
+        $tier = $flight->flightClasses->find($transaction['flight_class_id']);
+
+        return view('pages.booking.checkout', compact('transaction', 'flight', 'tier'));
     }
 
     public function checkBooking()
