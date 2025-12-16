@@ -20,7 +20,7 @@
         <p class="text-lg leading-8">Your truly great experience starts here with us <br>that lorem dolor amet si
             package exclusively matter.</p>
     </div>
-    <form action="/flights"
+    <form action="{{route('flight.index')}}" method="GET"
         class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[86px]">
         <div class="flex flex-col rounded-[30px] p-[30px] gap-4 bg-white">
             <h2 class="font-bold text-xl leading-[30px]">Book Your Next Flight</h2>
