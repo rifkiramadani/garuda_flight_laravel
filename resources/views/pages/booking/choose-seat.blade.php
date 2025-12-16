@@ -174,10 +174,10 @@
                                 <span class="font-semibold">Selected</span>
                             </div>
                         </div>
-                        <div id="Seats-Options" class="flex flex-wrap w-full gap-y-8 @if($tier->class_type == 'bussiness') gap-x-10 px-[33px] @else gap-x-[14px] @endif">
+                        <div id="Seats-Options" class="flex flex-wrap w-full gap-y-8 @if($tier->class_type == 'business') gap-x-10 px-[33px] @else gap-x-[14px] @endif">
                             @foreach ($flight->flightSeats->where('class_type', $tier->class_type) as $seat)
                                 <label
-                                    class="group relative flex w-[55px] h-[52.25px] shrink-0 @if ($tier->class_type == 'bussiness') [&:nth-child(6n+3)]:mr-[46px] @else [&:nth-child(6n+3)]:mr-[46px] @endif"
+                                    class="group relative flex w-[55px] h-[52.25px] shrink-0 @if ($tier->class_type == 'business') [&:nth-child(4n+2)]:mr-10 @else [&:nth-child(6n+3)]:mr-[46px] @endif"
                                     data-seat='{{$seat->name}}' data-seat-id="{{$seat->id}}">
                                     <input type="checkbox" name="seat"
                                         class="seat-checkbox absolute top-1/2 left-1/2 opacity-0"
