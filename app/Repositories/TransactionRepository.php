@@ -31,7 +31,7 @@ class TransactionRepository implements TransactionRepositoryInterface
     public function saveTransaction($data)
     {
         $data['code'] = $this->generateTransactionCode();
-        $data['number_of_passangers'] = $this->countPassangers($data['transactionPassangers']);
+        $data['number_of_passangers'] = $this->countPassangers($data['passangers']);
 
         //hitung subtotal dan grand total awal
         $data['subtotal'] = $this->calculateSubtotal($data['flight_class_id'], $data['number_of_passangers']);
@@ -39,7 +39,7 @@ class TransactionRepository implements TransactionRepositoryInterface
 
         //terapkan promo code jika ada
         if (!empty($data['promo_code'])) {
-            $data->$this->applyPromoCode($data);
+            $this->applyPromoCode($data);
         }
 
         //tambahkan ppn
@@ -47,7 +47,7 @@ class TransactionRepository implements TransactionRepositoryInterface
 
         //simpan transaksi dan penumpang
         $transaction  = $this->createTransaction($data);
-        $this->savePassangers($data['transactionPassangers'], $transaction->id);
+        $this->savePassangers($data['passangers'], $transaction->id);
 
         session()->forget('transaction');
 
@@ -74,7 +74,7 @@ class TransactionRepository implements TransactionRepositoryInterface
     private function applyPromoCode($data)
     {
         $promo = PromoCode::where('code', $data['promo_code'])
-            ->where('valid_untill', '>=', now())
+            ->where('valid_until', '>=', now())
             ->where('is_used', false)
             ->first();
 
@@ -106,6 +106,7 @@ class TransactionRepository implements TransactionRepositoryInterface
 
     private function savePassangers($passangers, $transactionId)
     {
+        // dd($passangers);
         foreach ($passangers as $passanger) {
             $passanger['transaction_id'] = $transactionId;
             TransactionPassenger::create($passanger);

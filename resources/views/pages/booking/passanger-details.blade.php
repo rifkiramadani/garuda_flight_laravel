@@ -178,6 +178,7 @@
                 </div>
                 <!-- for accordions with select input inside, the script was different from the normal accordion -->
                 @foreach ($transaction['selected_seats'] as $i)
+                <input type="hidden" name="passangers[{{$loop->index}}][flight_seat_id]" value="{{$i}}">
                     <div id="Passenger-{{$loop->index + 1}}" class="accordion-with-select group flex flex-col h-fit rounded-[20px] bg-white overflow-hidden transition-all duration-300">
                         <button type="button" class="accordion-btn flex items-center justify-between p-5">
                             <h2 class="font-bold text-xl leading-[30px]">Passenger {{$loop->index + 1}}</h2>
