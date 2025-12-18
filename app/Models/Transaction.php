@@ -23,7 +23,7 @@ class Transaction extends Model
 
     public function flightClass()
     {
-        return $this->belongsTo(FlightClass::class);
+        return $this->belongsTo(FlightClass::class, 'flight_class_id');
     }
 
     public function promoCode()
@@ -33,6 +33,6 @@ class Transaction extends Model
 
     public function transactionPassangers()
     {
-        return $this->hasOne(TransactionPassenger::class);
+        return $this->hasMany(TransactionPassenger::class);
     }
 }
