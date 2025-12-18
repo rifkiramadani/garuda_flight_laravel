@@ -260,8 +260,8 @@
                                     <select name="passangers[{{$loop->index}}][nationality]" id="" class="appearance-none w-full outline-none pl-[50px] py-3 px-5 font-semibold indeterminate:!font-normal">
                                         <option value="" hidden>Select country region</option>
                                         <option value="singapore" {{$passanger['nationality'] === 'singapore' ? 'selected' : ''}}>Singapore</option>
-                                        <option {{$passanger['nationality'] === 'japan' ? 'selected' : ''}}>Japan</option>
-                                        <option {{$passanger['nationality'] === 'indonesia' ? 'selected' : ''}}>Indonesia</option>
+                                        <option value="japan" {{$passanger['nationality'] === 'japan' ? 'selected' : ''}}>Japan</option>
+                                        <option value="singapore" {{$passanger['nationality'] === 'indonesia' ? 'selected' : ''}}>Indonesia</option>
                                     </select>
                                 </div>
                                 @error('passangers.' . $loop->index . '.nationality') <div class="text-red-500">{{$message}}</div> @enderror

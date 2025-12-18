@@ -45,7 +45,7 @@ class TransactionForm
                         TextInput::make('promoCode.code'),
                         TextInput::make('promoCode.discount_type'),
                         TextInput::make('promoCode.discount'),
-                        TextInput::make('payment_status'),
+                TextInput::make('payment_status')->badge(),
                         TextInput::make('subtotal'),
                         TextInput::make('grandtotal'),
                     ])
