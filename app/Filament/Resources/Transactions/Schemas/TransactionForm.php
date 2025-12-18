@@ -31,9 +31,8 @@ class TransactionForm
                         Section::make('List Of Passangers')
                             ->schema([
                                 Repeater::make('transaction_passengers')
-                                    ->relationship('transactionPassengers')
-                                    ->schema([
-                                        TextInput::make('flightSeat.name'),
+                        ->relationship('transactionPassangers')
+                        ->schema([
                                         TextInput::make('name'),
                                         TextInput::make('date_of_birth'),
                                         TextInput::make('nationality')

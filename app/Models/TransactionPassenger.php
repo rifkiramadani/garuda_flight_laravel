@@ -20,6 +20,6 @@ class TransactionPassenger extends Model
 
     public function flightSeat()
     {
-        return $this->belongsTo(flightSeat::class);
+        return $this->belongsTo(flightSeat::class, 'flight_seat_id');
     }
 }
