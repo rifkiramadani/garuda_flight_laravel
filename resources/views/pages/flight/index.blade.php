@@ -1,8 +1,18 @@
 @extends('layouts.app')
 
+@section('include')
+    <div id="Background-home" class="absolute top-0 w-full h-full bg-white">
+        <div
+            class="absolute top-0 w-full h-[1020px] bg-purple">
+            <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
+                class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+        </div>
+    </div>
+@endsection
+
 @section('content')
 <main class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[50px] mb-[62px]">
-        <h1 class="font-extrabold text-[50px] leading-[75px]">Flight Search</h1>
+        <h1 class="font-extrabold text-[50px] leading-[75px] text-white">Flight Search</h1>
         @if (request()->departure || request()->arrival || request()->date || request()->quantity)
             <div class="flex w-fit rounded-[20px] p-5 gap-[30px] bg-white mt-5">
                 @if (request()->departure)
@@ -150,7 +160,7 @@
                                 </div>
                                 <p class="min-w-[120px] font-semibold text-garuda-green text-center">Rp.{{number_format($flight->flightClasses->first()->price, 0, ',', '.')}}</p>
                                 <a href="{{route('flight.show', $flight->flight_number)}}"
-                                    class="rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                                    class="rounded-full py-3 px-5 text-center bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
                                     <span class="font-semibold text-white">Choose</span>
                                 </a>
                             </label>
@@ -230,7 +240,7 @@
                                 </div>
                                 <p class="min-w-[120px] font-semibold text-garuda-green text-center">Rp.{{number_format($flight->flightClasses->first()->price, 0, ',', '.')}}</p>
                                 <a href="{{route('flight.show', $flight->flight_number)}}"
-                                    class="rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                                    class="rounded-full py-3 px-5 text-center bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
                                     <span class="font-semibold text-white">Choose</span>
                                 </a>
                             </label>

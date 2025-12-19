@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('include')
-    <div id="Background"
-        class="absolute top-0 w-full h-[810px] bg-[linear-gradient(180deg,#85C8FF_0%,#D4D1FE_47.05%,#F3F6FD_100%)]">
-        <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
-            class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+    <div id="Background-home" class="absolute top-0 w-full h-full bg-white">
+        <div
+            class="absolute top-0 w-full h-[1020px] bg-purple">
+            <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
+                class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+        </div>
     </div>
 @endsection
-
 @section('content')
      <main class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[50px] mb-[62px]">
-        <h1 class="font-extrabold text-[50px] leading-[75px] mt-[30px]">Booking Details</h1>
+        <h1 class="font-extrabold text-[50px] leading-[75px] mt-[30px] text-white">Booking Details</h1>
         <div class="flex gap-[30px] mt-[30px]">
             <div id="Left-Content" class="flex flex-col gap-[30px] w-[470px] shrink-0">
                 <div id="Flight-Info"
@@ -267,7 +268,7 @@
                     </div>
                 @endforeach
                 <a href="#"
-                    class="w-full rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                    class="w-full rounded-full py-3 px-5 text-center bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
                     <span class="font-semibold text-white">Download .PDF Version</span>
                 </a>
             </div>

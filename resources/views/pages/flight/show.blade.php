@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
 @section('include')
-    <div id="Background" class="absolute top-0 w-full h-[810px] bg-[linear-gradient(180deg,#85C8FF_0%,#D4D1FE_47.05%,#F3F6FD_100%)]">
-        <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}" class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+    <div id="Background-home" class="absolute top-0 w-full h-full bg-white">
+        <div
+            class="absolute top-0 w-full h-[1020px] bg-purple">
+            <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
+                class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+        </div>
     </div>
 @endsection
 
@@ -12,7 +16,7 @@
             <img src="{{asset('assets/images/icons/arrow-left-white.svg')}}" class="w-6 h-6" alt="icon">
             <p class="font-semibold text-white">Back to Choose Flight</p>
         </a>
-        <h1 class="font-extrabold text-[50px] leading-[75px] mt-[30px]">Choose Tiers</h1>
+        <h1 class="font-extrabold text-[50px] leading-[75px] mt-[30px] text-white">Choose Tiers</h1>
         <div class="flex gap-[30px] mt-[30px]">
             <div id="Flight-Info" class="flex flex-col w-[470px] shrink-0 h-fit rounded-[20px] bg-white p-5 gap-5">
                 <h2 class="font-bold text-xl leading-[30px]">Your Flight</h2>
@@ -96,7 +100,7 @@
                                     <p class="font-semibold">{{$facility->name}}</p>
                                 </div>
                             @endforeach
-                        <button onclick="document.getElementById('flight_class_id').value = {{$flightClass->id}}" class="w-full rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                        <button onclick="document.getElementById('flight_class_id').value = {{$flightClass->id}}" class="w-full rounded-full py-3 px-5 text-center bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
                             <span class="font-semibold text-white">Choose</span>
                         </button>
                     </div>

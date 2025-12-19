@@ -3,7 +3,7 @@
 @section('include')
     <div id="Background-home" class="absolute top-0 w-full h-full bg-white">
         <div
-            class="absolute top-0 w-full h-[1020px] bg-[linear-gradient(180deg,#85C8FF_0%,#D4D1FE_47.05%,#F5F6FB_77.08%,#FFFFFF_100%)]">
+            class="absolute top-0 w-full h-[1020px] bg-purple">
             <img src="assets/images/backgrounds/Jumbo Jet Sky (1) 1.png"
                 class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
         </div>
@@ -16,9 +16,8 @@
             <img src="assets/images/icons/crown-black.svg" class="flex w-5 h-5 shrink-0" alt="icon">
             <p class="text-sm font-semibold">Top Flight Awards Fly Group Sky 500</p>
         </div>
-        <h1 class="font-extrabold text-[50px] leading-[75px]">Explore Magical <br>Wonderful Worlds</h1>
-        <p class="text-lg leading-8">Your truly great experience starts here with us <br>that lorem dolor amet si
-            package exclusively matter.</p>
+        <h1 class="font-extrabold text-[50px] leading-[75px] text-white">Begin a remarkable <br> journey with us,</h1>
+        <p class="text-lg leading-8 text-white">Start your next great adventure with us, <br>with exclusive experiences that truly matter.</p>
     </div>
     <form action="{{route('flight.index')}}" method="GET"
         class="relative flex flex-col w-full max-w-[1280px] px-[75px] mx-auto mt-[86px]">
@@ -127,7 +126,7 @@
                     </div>
                 </div>
                 <button type="submit"
-                    class="flex flex-col items-center gap-[6px] rounded-[30px] py-3 px-5 bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
+                    class="flex flex-col items-center gap-[6px] rounded-[30px] py-3 px-5 bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300">
                     <img src="assets/images/icons/search-status-white.svg" class="flex shrink-0 w-[30px]" alt="icon">
                     <p class="text-sm font-semibold text-center text-white">Explore</p>
                 </button>

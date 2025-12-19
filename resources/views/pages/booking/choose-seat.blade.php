@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('include')
-     <div id="Background"
-        class="absolute top-0 w-full h-[810px] bg-[linear-gradient(180deg,#85C8FF_0%,#D4D1FE_47.05%,#F3F6FD_100%)]">
-        <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
-            class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+    <div id="Background-home" class="absolute top-0 w-full h-full bg-white">
+        <div
+            class="absolute top-0 w-full h-[1020px] bg-purple">
+            <img src="{{asset('assets/images/backgrounds/Jumbo Jet Sky (1) 1.png')}}"
+                class="absolute right-0 top-[147px] object-contain max-h-[481px]" alt="background image">
+        </div>
     </div>
 @endsection
 
@@ -17,7 +19,7 @@
                     <img src="{{asset('assets/images/icons/arrow-left-white.svg')}}" class="w-6 h-6" alt="icon">
                     <p class="font-semibold text-white">Back to Choose Flight</p>
                 </a>
-                <h1 class="font-extrabold text-[50px] leading-[75px]">Choose Seats</h1>
+                <h1 class="font-extrabold text-[50px] leading-[75px] text-white">Choose Seats</h1>
                 <div id="Flight-Info"
                     class="accordion group flex flex-col h-fit rounded-[20px] bg-white overflow-hidden has-[:checked]:!h-[75px] transition-all duration-300">
                     <label class="flex items-center justify-between p-5">
@@ -199,7 +201,7 @@
                             @endforeach
                         </div>
                         <button type="submit"
-                            class="w-full rounded-full py-3 px-5 text-center bg-garuda-blue hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300 mt-[30px]">
+                            class="w-full rounded-full py-3 px-5 text-center bg-airline-purple-soft hover:shadow-[0px_14px_30px_0px_#0068FF66] transition-all duration-300 mt-[30px]">
                             <span class="font-semibold text-white">Continue Booking</span>
                         </button>
                     </form>
