@@ -118,8 +118,8 @@
                                 </button>
                                 <p class="font-semibold text-nowrap"><span class="number">1</span> people</p>
                                 <input type="number" name="quantity" id="quantity" value="1" class="hidden">
-                                <button type="button" id="plus" class="w-[38px] h-[38px] flex shrink-0">
-                                    <img src="assets/images/icons/plus.svg" alt="icon">
+                                <button type="button" id="plus" class="w-[38px] h-[38px] flex shrink-0 bg-airline-purple">
+                                    <img src="{{asset('assets/images/icons/plus.svg')}}" alt="icon">
                                 </button>
                             </div>
                         </div>
@@ -144,12 +144,12 @@
                 <div class="swiper-slide !w-fit first:ml-[calc(((100%-1280px)/2)+75px-24px)]">
                     <a href="#" class="card">
                         <div
-                            class="flex items-end w-[230px] h-[280px] shrink-0 rounded-[30px] bg-white overflow-hidden hover:border-2 hover:border-garuda-blue hover:p-[10px] transition-all duration-300">
+                            class="flex items-end w-[230px] h-[280px] shrink-0 rounded-[30px] bg-white overflow-hidden hover:border-2 hover:border-[#6D28D9] hover:p-[10px] transition-all duration-300">
                             <img src="{{asset('storage/'. $airport->image)}}"
                                 class="w-full h-full object-cover rounded-[30px]" alt="{{$airport->image}}">
                             <div
                                 class="absolute flex w-[210px] items-center bottom-[10px] left-[10px] right-[10px] rounded-[20px] p-[10px] gap-[10px] bg-white">
-                                <img src="assets/images/icons/global-black.svg" class="flex w-6 shrink-0" alt="icon">
+                                <img src="{{asset('assets/images/icons/global-black.svg')}}" class="flex w-6 shrink-0" alt="icon">
                                 <div>
                                     <p class="font-semibold">{{$airport->name}} ({{$airport->iata_code}})</p>
                                     <p class="text-sm text-garuda-grey">{{$airport->city}}, {{$airport->country}}</p>

@@ -1084,10 +1084,14 @@ video {
 }
 
 .border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+    --tw-border-opacity: 1;
+        border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+/* .border-purple {
+    --tw-border-opacity: 1;
+    border-color: #6D28D9;
+} */
 .bg-\[\#C2C9DA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(194 201 218 / var(--tw-bg-opacity));
